@@ -6,6 +6,14 @@ angular.module('video-player')
 
 .directive('app', function() {
   return {
+    restrict: 'E',
+    controllerAs: 'ctrl',
+    bindToController: true,
+    controller: function() {
+      this.onClick = (index) => {
+        alert(index)
+      }
+    },
     templateUrl: 'src/templates/app.html'
   };
 });

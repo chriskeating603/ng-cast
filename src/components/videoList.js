@@ -2,7 +2,8 @@ angular.module('video-player')
 .directive('videoList', function() {
   return {
     scope: {
-      videos: '<'
+      videos: '<',
+      onClick: '<'
     },
     restrict: 'E',
     controllerAs: 'ctrl',

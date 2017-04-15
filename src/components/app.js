@@ -1,15 +1,15 @@
 angular.module('video-player')
-.controller('DataCtrl', function($scope) {
-  $scope.videos = window.exampleVideoData;
+// .controller('DataCtrl', function($scope) {
+//   $scope.videos = window.exampleVideoData;
 
-})
+// })
 
 .directive('app', function() {
   return {
     scope: {
 
     },
-    restrict: 'E',
+    restrict: 'E',  
     controllerAs: 'ctrl',
     bindToController: true,
     controller: function() {
@@ -19,10 +19,11 @@ angular.module('video-player')
       this.searchResults = () => {
 
       },
-      this.currentVideo = {},
-      this.videos = [],
+      this.videos = window.exampleVideoData,
+      this.currentVideo = this.videos[0],
       this.onClick = (index) => {
-        alert(index)
+        // return this.videos[index].snippet.title
+        this.currentVideo = window.exampleVideoData[index];
       };
     },
     templateUrl: 'src/templates/app.html'

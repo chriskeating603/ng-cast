@@ -1,7 +1,17 @@
 angular.module('video-player')
 
 .directive('videoPlayer', function() {
+
   return {
-   templateUrl: 'src/templates/videoPlayer.html'    // TODO
+    scope: {
+      videos: '<'
+    },
+    restrict: 'E',
+    controllerAs: 'ctrl',
+    bindToController: true,
+    controller: function () {
+      
+    },
+    templateUrl: 'src/templates/videoPlayer.html'
   };
 });

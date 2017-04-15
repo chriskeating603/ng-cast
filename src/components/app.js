@@ -1,9 +1,4 @@
 angular.module('video-player')
-// .controller('DataCtrl', function($scope) {
-//   $scope.videos = window.exampleVideoData;
-
-// })
-
 .directive('app', function() {
   return {
     scope: {
@@ -12,7 +7,7 @@ angular.module('video-player')
     restrict: 'E',  
     controllerAs: 'ctrl',
     bindToController: true,
-    controller: function() {
+    controller: function(youTube) {
       this.selectVideo = () => {
 
       },
@@ -22,9 +17,11 @@ angular.module('video-player')
       this.videos = window.exampleVideoData,
       this.currentVideo = this.videos[0],
       this.onClick = (index) => {
-        // return this.videos[index].snippet.title
         this.currentVideo = window.exampleVideoData[index];
-      };
+      },
+      this.result = () => {
+        console.log(youTube.search());
+      }
     },
     templateUrl: 'src/templates/app.html'
   };

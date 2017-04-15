@@ -11,7 +11,11 @@ angular.module('video-player')
     bindToController: true,
     controller: function () {
       this.videoURL = (id) => {
-        return  "https://www.youtube.com/embed/" + id;
+        if (id) {
+          return  "https://www.youtube.com/embed/" + id;
+        } else {
+          return false;
+        }
       }
     },
     templateUrl: 'src/templates/videoPlayer.html'

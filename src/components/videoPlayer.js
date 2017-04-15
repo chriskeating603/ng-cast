@@ -10,7 +10,9 @@ angular.module('video-player')
     controllerAs: 'ctrl',
     bindToController: true,
     controller: function () {
-
+      this.videoURL = () => {
+        return  `https://www.youtube.com/embed/${this.video.id.videoId}`
+      }
     },
     templateUrl: 'src/templates/videoPlayer.html'
   };

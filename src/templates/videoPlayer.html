@@ -3,9 +3,7 @@
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1w8Z0UOXVaY" allowFullScreen></iframe>
   </div>
   <div class="video-player-details">
-    <h3 ng-repeat="video in ctrl.videos track by $index">
-	{{video.title}}
-    </h3>
-    <div ng-repeat="video in ctrl.videos track by $index">{{video.description}}</div>
+    <h3>{{ctrl.videos.snippet.title}}</h3>
+    <div>{{ctrl.videos.snippet.description}}</div>
   </div>
 </div>

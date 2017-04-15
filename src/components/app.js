@@ -1,7 +1,7 @@
 angular.module('video-player')
 
 .controller('DataCtrl', function($scope) {
-  $scope.myVideos = window.exampleVideoData;
+  $scope.videos = window.exampleVideoData;
 })
 
 .directive('app', function() {

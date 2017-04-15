@@ -10,7 +10,7 @@ angular.module('video-player')
     controllerAs: 'ctrl',
     bindToController: true,
     controller: function () {
-      
+
     },
     templateUrl: 'src/templates/videoPlayer.html'
   };
